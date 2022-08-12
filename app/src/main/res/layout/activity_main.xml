@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollview"
+    android:layout_above="@+id/player_layout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bhakti Song"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:id="@+id/bhakti_title"
+        android:padding="10dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/bhakti_list" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bollywood Mush"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:id="@+id/bollywood_title"
+            android:padding="10dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/bollywood_list" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Punjabi Pop"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:id="@+id/punjabi"
+            android:padding="10dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/punjabi_list" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tollywood Pearls"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:id="@+id/Tamil"
+            android:padding="10dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/tamil_list" />
+    </LinearLayout>
+</ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#34495E"
+            app:cardCornerRadius="25dp">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+       <ImageView
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           android:src="@drawable/ic_baseline_music_note_24"
+           android:id="@+id/photo"
+           android:layout_margin="5dp"/>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <ImageView
+                  android:id="@+id/play_btn"
+                  android:layout_width="25dp"
+                  android:layout_height="25dp"
+                  android:layout_margin="5dp"
+                  android:src="@drawable/play" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="5dp"
+                  android:text="Song Name"
+                  android:ellipsize="marquee"
+                  android:id="@+id/music_name" />
+              <com.airbnb.lottie.LottieAnimationView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:lottie_rawRes="@raw/music"
+                  app:lottie_autoPlay="true"
+                  app:lottie_loop="true"/>
+          </LinearLayout>
+
+          <SeekBar
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+              android:id="@+id/music_bar"/>
+      </LinearLayout>
+   </LinearLayout>
+        </androidx.cardview.widget.CardView>
+</RelativeLayout>
+</RelativeLayout>
